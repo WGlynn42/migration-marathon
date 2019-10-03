@@ -1,0 +1,17 @@
+<h1>Books</h1>
+
+<ul>
+<% @books.each do |book| %>
+  <li>
+    <%= book.title %> by <%= book.author %>
+    <br />
+    Rating:
+    <% if book.rating %>
+      <%= book.rating %>
+    <% else %>
+      No ratings yet...
+    <% end %>
+  </li>
+  <br />
+<% end %>
+</ul>
